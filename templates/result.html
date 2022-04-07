@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result: Heart disease Prediction</title>
+    <link rel="stylesheet" href="/static/style/result.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="/"> <span> Home </span></a>
+        <div class="heading">Heart Disease Prediction</div>
+    </div>
+
+    <div class="information">
+        <div class="info">
+            <div class="title"> The following information was provided by you:</div>
+
+            <table>
+                <tr>
+                    <th>Question</th>
+                    <th>Answer</th>
+                </tr>
+                <tr>
+                    <td>Can I Know your Name?</td>
+                    <td>{{results.name_person}}</td>
+                </tr>
+                <tr>
+                    <td>Can I Know your Age?</td>
+                    <td>{{results.age}}</td>
+                </tr>
+
+                <tr>
+                    <td>Can I know your Sex?</td>
+                    <td>
+
+                        {% if results.gender == '0' %}
+                        Female
+                        {% else %}
+                        Male
+                        {% endif %}
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>What type of chest pain you have?</td>
+                    <td>
+
+                        {% if results['chest-pain-type'] == '1' %}
+                        Typical Agina
+                        {% elif results['chest-pain-type'] == '2' %}
+                        Atypical Agina
+                        {% elif results['chest-pain-type'] == '3' %}
+                        Non-aginal pain
+                        {% else %}
+                        Asymptomatic
+                        {% endif %}
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Do your exercise induced angina?</td>
+                    <td>
+
+                        {% if results['induced-agina'] == '1' %}
+                        Yes
+                        {% else %}
+                        No
+                        {% endif %}
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Is your fasting blood sugar > 120 mg/dl?</td>
+                    <td>
+
+                        {% if results['fasting-blood-sugar'] == '1' %}
+                        Yes
+                        {% else %}
+                        No
+                        {% endif %}
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>What is the slope of your peak exercise ST segment?</td>
+                    <td>{{results['resting-blood-pressure']}}</td>
+                </tr>
+
+                <tr>
+                    <td>What type of chest pain you have?</td>
+                    <td>
+
+                        {% if results['peak-exercise-st'] == '1' %}
+                        Up Sloping
+                        {% elif results['peak-exercise-st'] == '2' %}
+                        Flat
+                        {% else %}
+                        Down Sloping
+                        {% endif %}
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>What is your ST depression value, induced by exercise, relative to rest?</td>
+                    <td>{{results['st-depressed-value']}}</td>
+                </tr>
+
+                <tr>
+                    <td>Tell me the maximum heart-rate achieved by you?</td>
+                    <td>{{results['heart-rate-value']}}</td>
+                </tr>
+
+                <tr>
+                    <td>Enter your serum cholestrol in mg/dl?</td>
+                    <td>{{results['serum-cholestrol-value']}}</td>
+                </tr>
+
+                <tr>
+                    <td>Which of this is your resting ElectroCardioGraph (ECG)?</td>
+                    <td>
+
+                        {% if results['resting-ecg'] == '0' %}
+                        Normal
+                        {% elif results['resting-ecg'] == '1' %}
+                        Having ST - T wave abnormality
+                        {% else %}
+                        Left ventricular hypertrophy
+                        {% endif %}
+
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="prediction">
+            <div class="predict">
+                {% if results['prediction']==0 %}
+                <div class="flex-wrapper">
+                    <div class="single-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart orange">
+                            <path class="circle-bg" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831" style="stroke: #40ec1e;" />
+                            <text x="18" y="20.35" class="percentage">Healthy</text>
+                        </svg>
+                    </div>
+                </div>
+
+                {% elif results['prediction']==1 %}
+
+                <div class="flex-wrapper">
+                    <div class="single-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart orange">
+                            <path class="circle-bg" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831" style="stroke: #ec1e1e;" />
+                            <text x="18" y="20.35" class="percentage">Risk</text>
+                        </svg>
+                    </div>
+                </div>
+                {% else %}
+                <div>
+
+                </div>
+
+                {% endif %}
+            </div>
+            
+
+
+            <div class="predict-prob">
+                {% if results['prediction-prob']>=70 %}
+                <div class="flex-wrapper">
+                    <div class="single-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart orange">
+                            <path class="circle-bg" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="{{results['prediction-prob']}}, 100" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831" style="stroke: #40ec1e;" />
+                            <text x="18" y="20.35" class="percentage">Accuracy: {{results['prediction-prob']}}%</text>
+                        </svg>
+                    </div>
+                </div>
+
+                {% elif results['prediction-prob']>=60 %}
+
+                <div class="flex-wrapper">
+                    <div class="single-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart orange">
+                            <path class="circle-bg" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="{{results['prediction-prob']}}, 100" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831" style="stroke: #ecab1e;" />
+                            <text x="18" y="20.35" class="percentage">Accuracy: {{results['prediction-prob']}}%</text>
+                        </svg>
+                    </div>
+                </div>
+
+                {% elif results['prediction-prob']>=50 %}
+
+                <div class="flex-wrapper">
+                    <div class="single-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart orange">
+                            <path class="circle-bg" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="{{results['prediction-prob']}}, 100" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831" style="stroke: #ec1e1e;" />
+                            <text x="18" y="20.35" class="percentage">Accuracy: {{results['prediction-prob']}}%</text>
+                        </svg>
+                    </div>
+                </div>
+                {% else %}
+                <div>
+
+                </div>
+
+                {% endif %}
+            </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="print">
+        <div><button class="printO" onClick="window.print()">Print
+        </button></div>
+        </div>
+
+</body>
+
+</html>

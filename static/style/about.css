@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Titillium+Web:wght@400&display=swap');
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    background: rgb(2,0,36);
+    background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 40%, rgb(255, 255, 255) 100%);
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    border-radius: 20px;
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #0704aa;
+    color: white;
+  }
+  .topnav span{
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .topnav span:after {
+    color: #fff;
+    content: '\276e';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+  }
+ .topnav a:hover span {
+    padding-left: 25px;
+  }
+  .topnav a:hover span:after {
+    opacity: 1;
+    left: 0;
+  }
+
+  .heading{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 26px;
+    text-align: center;
+    padding: 10px 16px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.about-me{
+    
+    font-size: 28px;
+    padding-top: 20px;
+    width: 80%;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: justify;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.image{
+  border-radius: 10px;
+    padding-top: 20px;
+    width: 100%;
+  height: auto;
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 50px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  
+  /* Twitter */
+  .fa-twitter {
+      border-radius: 20px;
+    background: #55ACEE;
+    color: white;
+  }
+
+  .icon{
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 50px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+     
+      display: flex;
+      flex-direction: row;
+  }
+
+  .fa-github {
+    border-radius: 20px;
+    background: #000000;
+    color: white;
+   margin-right: 10px;
+  }
+
+  .fa-linkedin {
+    border-radius: 20px;
+    background: #0e76a8;
+    color: white;
+   margin-right: 10px;
+  }
+
+  /* Style buttons */
+.btn {
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(40, 16, 146);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .btn i{
+      font-size: 30px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }

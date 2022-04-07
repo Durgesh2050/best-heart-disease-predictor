@@ -1,0 +1,604 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    background: rgb(2,0,36);
+    background: linear-gradient(270deg, rgba(2,0,36,1) 0%, #283E7E 40%, rgb(255, 255, 255) 100%);
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    border-radius: 20px;
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #28407E;
+    color: white;
+  }
+  .topnav span{
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .topnav span:after {
+    color: #fff;
+    content: '\276e';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+  }
+ .topnav a:hover span {
+    padding-left: 25px;
+  }
+  .topnav a:hover span:after {
+    opacity: 1;
+    left: 0;
+  }
+
+.heading{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 26px;
+    text-align: center;
+    padding: 10px 16px;
+    margin-right: 120px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+
+.container{
+    font-family: 'Titillium Web', sans-serif;
+    width: 100%;
+  margin: auto !important;
+  display: block;
+  height: 500px;
+  position: relative;
+  list-style-type: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* style the card */
+.main-frame{
+    display: none;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    width: 80%;
+    height: 600px;
+    top: 50px;
+    left: 100px;
+    position: absolute;
+    cursor: hand;
+}
+
+.sub-frame{
+    border-radius:10px;
+    padding-top: 10px;
+    background-color: #283E7E;
+    height: 500px;
+    padding-bottom: 60px;
+}
+
+.button{
+    cursor: pointer;
+    border-radius: 60px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    position: relative;
+    margin-left: 45%;
+    margin-top: 15px;
+}
+.button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    content: '\276f';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .button:hover span {
+    padding-right: 25px;
+  }
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+/* what is your gender */
+
+.question-gender .question{
+    font-family: 'Titillium Web', sans-serif;
+    color: rgb(255, 255, 255);
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.question-gender [type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .question-gender [type=radio]:checked + i{
+    color: green;
+  }
+
+  .question-gender [type=radio] + i{
+    cursor: pointer;
+  }
+
+.question-gender .option{
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    font-size: 300px;
+    color:gray;
+}
+
+/* What is your age? */
+
+.question-age .question{
+    font-family: 'Titillium Web', sans-serif;
+    color: #fff;
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+.question-age .option{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.range-wrap {
+    position: relative;
+    margin: 0 auto 3rem;
+  }
+  .range {
+      cursor: pointer;
+    width: 100%;
+  }
+  .bubble {
+    border-radius: 60px;
+    background: rgba(255, 0, 0, 0.863);
+    color: white;
+    padding: 10px 12px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .bubble::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: red;
+    top: -1px;
+    left: 50%;
+  }
+
+
+/* Chest pain type */
+
+.question-chest-pain-type .question{
+    font-family: 'Titillium Web', sans-serif;
+    color:white;
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+   padding-bottom: 50px;
+}
+
+.question-chest-pain-type .option .col{
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: rgb(255, 254, 254);
+}
+
+.question-chest-pain-type .option{
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.question-chest-pain-type [type=radio]{
+    font-family: 'Titillium Web', sans-serif;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.question-chest-pain-type [type=radio]:checked + p{
+    font-family: 'Titillium Web', sans-serif;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(44, 233, 44);
+    font-size: 26px;
+    border: 3px solid;
+    width:300px;
+    height:50px;
+    padding-top: 20px;
+}
+
+
+.question-chest-pain-type [type=radio] + p{
+    font-family: 'Titillium Web', sans-serif;
+    padding-top: 20px;
+    text-align: center;
+    cursor:pointer;
+    font-size: 24px;
+    border: 2px solid;
+    width:300px;
+    height:50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color:rgb(153, 150, 150);
+}
+
+/* Is your fasting blood sugar > 120 mg/dl */
+.question-fasting-blood-sugar .question{
+    font-family: 'Titillium Web', sans-serif;
+    color:white;
+    margin-top: 80px;
+    font-size: 30px;
+    text-align: center;
+   padding-bottom: 50px;
+}
+
+.question-fasting-blood-sugar .option .col{
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: rgb(255, 254, 254);
+}
+
+.question-fasting-blood-sugar .option{
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+
+.question-fasting-blood-sugar [type=radio]{
+    font-family: 'Titillium Web', sans-serif;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.question-fasting-blood-sugar [type=radio]:checked + p{
+    font-family: 'Titillium Web', sans-serif;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(44, 233, 44);
+    font-size: 26px;
+    border: 3px solid;
+    width:300px;
+    height:50px;
+    padding-top: 20px;
+}
+
+.question-fasting-blood-sugar [type=radio] + p{
+    font-family: 'Titillium Web', sans-serif;
+    padding-top: 20px;
+    text-align: center;
+    cursor:pointer;
+    font-size: 24px;
+    border: 2px solid;
+    width:300px;
+    height:50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color:rgb(153, 150, 150);
+}
+
+/* Do your fasting induced angina */
+.question-induced-agina .question{
+    font-family: 'Titillium Web', sans-serif;
+    color:white;
+    margin-top: 80px;
+    font-size: 30px;
+    text-align: center;
+   padding-bottom: 50px;
+}
+
+.question-induced-agina .option .col{
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: rgb(255, 254, 254);
+}
+
+.question-induced-agina .option{
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+
+.question-induced-agina [type=radio]{
+    font-family: 'Titillium Web', sans-serif;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.question-induced-agina [type=radio]:checked + p{
+    font-family: 'Titillium Web', sans-serif;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(44, 233, 44);
+    font-size: 26px;
+    border: 3px solid;
+    width:300px;
+    height:50px;
+    padding-top: 20px;
+}
+
+.question-induced-agina [type=radio] + p{
+    font-family: 'Titillium Web', sans-serif;
+    padding-top: 20px;
+    text-align: center;
+    cursor:pointer;
+    font-size: 24px;
+    border: 2px solid;
+    width:300px;
+    height:50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color:rgb(153, 150, 150);
+}
+
+
+/* What is you systolic blood pressure */
+
+.question-resting-systolic .question{
+    font-family: 'Titillium Web', sans-serif;
+    color: #fff;
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+.question-resting-systolic .option{
+    font-family: 'Titillium Web', sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+/* what is the slope of your peak exercise ST segment? */
+
+.question-st-segment .question{
+    font-family: 'Titillium Web', sans-serif;
+    color:white;
+    margin-top: 80px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.question-st-segment .option .col{
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: rgb(255, 254, 254);
+}
+
+.question-st-segment .option{
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 50px;
+}
+
+
+.question-st-segment [type=radio]{
+    font-family: 'Titillium Web', sans-serif;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.question-st-segment [type=radio]:checked + p{
+    font-family: 'Titillium Web', sans-serif;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(44, 233, 44);
+    font-size: 26px;
+    border: 3px solid;
+    width:300px;
+    height:50px;
+    padding-top: 20px;
+}
+
+.question-st-segment [type=radio] + p{
+    font-family: 'Titillium Web', sans-serif;
+    padding-top: 20px;
+    text-align: center;
+    cursor:pointer;
+    font-size: 24px;
+    border: 2px solid;
+    width:300px;
+    height:50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color:rgb(153, 150, 150);
+}
+
+/* What is your ST depression value induced by exercise */
+
+.question-st-depression .question{
+    font-family: 'Titillium Web', sans-serif;
+    color: #fff;
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+.question-st-depression .option{
+    font-family: 'Titillium Web', sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+/* Tell me the maximum heart-rate achieved by you? */
+
+.question-heart-rate .question{
+    font-family: 'Titillium Web', sans-serif;
+    color: #fff;
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+.question-heart-rate .option{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* Enter your serum cholestrol in mg/dl? */
+.question-serum-cholestrol .question{
+    font-family: 'Titillium Web', sans-serif;
+    color: #fff;
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+.question-serum-cholestrol .option{
+    font-family: 'Titillium Web', sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+
+.question-resting-ecg .question{
+    font-family: 'Titillium Web', sans-serif;
+    color:white;
+    margin-top: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.question-resting-ecg .option{
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding-left: 400px;
+    padding-right: 400px;
+
+}
+
+
+.question-resting-ecg [type=radio]{
+    font-family: 'Titillium Web', sans-serif;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.question-resting-ecg [type=radio]:checked + p{
+    font-family: 'Titillium Web', sans-serif;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(44, 233, 44);
+    font-size: 26px;
+    border: 3px solid;
+    width:350px;
+    height:50px;
+    padding-top: 20px;
+}
+
+.question-resting-ecg [type=radio] + p{
+    font-family: 'Titillium Web', sans-serif;
+    padding-top: 20px;
+    text-align: center;
+    cursor:pointer;
+    font-size: 24px;
+    border: 2px solid;
+    width:350px;
+    height:50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color:rgb(153, 150, 150);
+}
+
+.question-ask-name .question{
+    font-family: 'Titillium Web', sans-serif;
+    color: #fff;
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.question-ask-name [type=text]{
+    margin-top: 60px;
+    margin-bottom: 50px;
+    width:32%;
+    margin-left: 400px;
+    box-sizing: border-box;
+}
