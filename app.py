@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright (c) 2022 Neelkant Newra
+Copyright (c) 2022 Best Heart Disease predication
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
