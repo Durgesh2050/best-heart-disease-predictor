@@ -11,7 +11,7 @@
 <body>
     <div class="topnav">
         <a class="active" href="/"> <span> Home </span></a>
-        <div class="heading">Heart Disease Prediction</div>
+        <div class="heading">Prediction Result</div>
     </div>
 
     <div class="information">
@@ -77,11 +77,11 @@
                     <td>Is your fasting blood sugar > 120 mg/dl?</td>
                     <td>
 
-                        {% if results['fasting-blood-sugar'] == '1' %}
+                    {% if results['fasting-blood-sugar'] == '1' %}
                         Yes
-                        {% else %}
+                    {% else %}
                         No
-                        {% endif %}
+                    {% endif %}
 
                     </td>
                 </tr>
