@@ -1,5 +1,5 @@
 '''
-@author neelkant newra
+@author Heart disease prediction
 date 02.04.2022
 
 Program to combine the model prediction
