@@ -1,8 +1,8 @@
 # best-heart-disease-predictor
 
-##our webapplication is live @ https://heart-disease-predication.herokuapp.com/
+## our webapplication is live @ https://heart-disease-predication.herokuapp.com/
 
-##To run this file in local
+## To run this file in local
 
 `git clone https://github.com/Durgesh2050/best-heart-disease-predictor.git`
 
